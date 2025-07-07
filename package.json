@@ -2,7 +2,7 @@
   "name": "mobilex-app-builder",
   "private": true,
   "scripts": {
-    "build": "remix vite:build",
+    "build": "prisma generate && remix vite:build",
     "dev": "npx shopify app dev",
     "config:link": "npx shopify app config link",
     "generate": "npx shopify app generate",
