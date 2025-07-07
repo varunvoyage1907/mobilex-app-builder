@@ -9,8 +9,8 @@ generator client {
 // enough when changing adapters.
 // See https://www.prisma.io/docs/orm/reference/prisma-schema-reference#string for more information
 datasource db {
-  provider = "sqlite"
-  url      = "file:dev.sqlite"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Session {
@@ -38,6 +38,37 @@ model Template {
   designType String   @default("homepage")
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+}
+
+model App {
+  id         String   @id @default(cuid())
+  name       String
+  data       Json?
+  templateId String?
+  isPublished Boolean @default(false)
+  version    String  @default("1.0.0")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  
+  // Relations
+  pages      Page[]
+}
+
+model Page {
+  id         String   @id @default(cuid())
+  appId      String
+  pageType   String   // 'homepage', 'product', 'collection', 'cart', etc.
+  name       String   // Display name for the page
+  data       Json     // Component data for this page
+  isActive   Boolean  @default(true)
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  
+  // Relations
+  app        App      @relation(fields: [appId], references: [id], onDelete: Cascade)
+  
+  @@unique([appId, pageType])
 }
 
 model PdpConfig {

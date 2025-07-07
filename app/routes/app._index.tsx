@@ -230,6 +230,108 @@ export default function Index() {
               <Card>
                 <BlockStack gap="200">
                   <Text as="h2" variant="headingMd">
+                    🎨 Mobile App Builder Tools
+                  </Text>
+                  <BlockStack gap="300">
+                     <Link url="/app/multi-builder" removeUnderline>
+                       <Card>
+                         <Box padding="400" background="bg-surface-brand" borderRadius="200">
+                           <BlockStack gap="200">
+                             <Text as="h3" variant="headingSm" tone="base">
+                               🏗️ Multi-Page App Builder
+                             </Text>
+                             <Text as="p" variant="bodyMd">
+                               Build a complete mobile app with multiple pages: Home, Products, Collections, Cart, and more! Create one app with all your pages working together.
+                             </Text>
+                           </BlockStack>
+                         </Box>
+                       </Card>
+                     </Link>
+
+                     <Link url="/app/templates" removeUnderline>
+                       <Card>
+                         <BlockStack gap="200">
+                           <Text as="h3" variant="headingSm">
+                             📱 Single Page Templates
+                           </Text>
+                           <Text as="p" variant="bodyMd">
+                             Create individual page templates: Home page, Products, Collections, Cart, Search, etc. Perfect for creating reusable page designs.
+                           </Text>
+                         </BlockStack>
+                       </Card>
+                     </Link>
+
+                     <Link url="/app/apps" removeUnderline>
+                       <Card>
+                         <BlockStack gap="200">
+                           <Text as="h3" variant="headingSm">
+                             📲 My Mobile Apps
+                           </Text>
+                           <Text as="p" variant="bodyMd">
+                             View and manage all your saved mobile apps. Edit, preview, duplicate, or publish your completed mobile experiences.
+                           </Text>
+                         </BlockStack>
+                       </Card>
+                     </Link>
+
+                     <Link url="/app/theme-importer" removeUnderline>
+                       <Card>
+                         <BlockStack gap="200">
+                           <Text as="h3" variant="headingSm">
+                             📦 Theme Importer
+                           </Text>
+                           <Text as="p" variant="bodyMd">
+                             Upload any Shopify theme ZIP file to automatically convert it into a mobile app. Analyzes components, design, and generates mobile-optimized versions.
+                           </Text>
+                         </BlockStack>
+                       </Card>
+                     </Link>
+
+                     <Link url="/app/theme-customizer" removeUnderline>
+                       <Card>
+                         <BlockStack gap="200">
+                           <Text as="h3" variant="headingSm">
+                             🎯 Theme Customizer
+                           </Text>
+                           <Text as="p" variant="bodyMd">
+                             Build mobile app layouts with sections and blocks, just like Shopify themes. Perfect for creating structured mobile experiences.
+                           </Text>
+                         </BlockStack>
+                       </Card>
+                     </Link>
+                     
+                     <Link url="/app/builder" removeUnderline>
+                       <Card>
+                         <BlockStack gap="200">
+                           <Text as="h3" variant="headingSm">
+                             🧱 Mobile App Builder
+                           </Text>
+                           <Text as="p" variant="bodyMd">
+                             Drag-and-drop component builder. Create mobile apps with custom components and layouts.
+                           </Text>
+                         </BlockStack>
+                       </Card>
+                     </Link>
+
+                     <Link url="/app/builder?demo=goeye-header" removeUnderline>
+                       <Card>
+                         <BlockStack gap="200">
+                           <Text as="h3" variant="headingSm">
+                             👁️ GoEye Header Demo
+                           </Text>
+                           <Text as="p" variant="bodyMd">
+                             Try the complete GoEye mobile header component with menu drawer, search, nav tabs, and trending slider.
+                           </Text>
+                         </BlockStack>
+                       </Card>
+                     </Link>
+                  </BlockStack>
+                </BlockStack>
+              </Card>
+              
+              <Card>
+                <BlockStack gap="200">
+                  <Text as="h2" variant="headingMd">
                     App template specs
                   </Text>
                   <BlockStack gap="200">

@@ -198,6 +198,137 @@ function CustomProductPage({
     const props = item.props || {};
     
     switch (item.type) {
+      case 'MobileHeader':
+        return (
+          <div key={item.id} style={{ 
+            position: 'sticky', 
+            top: 0, 
+            zIndex: 20, 
+            background: props.backgroundColor || '#ffffff', 
+            padding: '1rem',
+            borderBottom: '1px solid #eee',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            gridColumn: '1 / -1'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+              <div style={{ flex: 1, display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                {props.showMenu !== false && (
+                  <button style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                  </button>
+                )}
+                {props.offerText && (
+                  <span style={{ 
+                    background: 'linear-gradient(135deg, #FF6B6B, #FF8E8E)', 
+                    color: 'white', 
+                    padding: '5px 12px', 
+                    borderRadius: '50px', 
+                    fontSize: '12px', 
+                    fontWeight: 600,
+                    textDecoration: 'none'
+                  }}>
+                    {props.offerText}
+                  </span>
+                )}
+              </div>
+              
+              <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                {props.logoUrl ? (
+                  <img src={props.logoUrl} alt="Logo" style={{ maxHeight: '40px', maxWidth: '100px' }} />
+                ) : (
+                  <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#333' }}>LOGO</div>
+                )}
+              </div>
+              
+              <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <div style={{ position: 'relative' }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
+                  <span style={{ 
+                    position: 'absolute', 
+                    top: '-8px', 
+                    right: '-8px', 
+                    background: '#EF4444', 
+                    color: 'white', 
+                    fontSize: '10px', 
+                    minWidth: '16px', 
+                    height: '16px', 
+                    borderRadius: '8px', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    fontWeight: 600 
+                  }}>
+                    2
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div style={{ marginBottom: '1rem' }}>
+              <div style={{ position: 'relative' }}>
+                <input 
+                  type="text" 
+                  placeholder="Search products..." 
+                  style={{ 
+                    width: '100%', 
+                    padding: '10px 40px 10px 15px', 
+                    border: '1px solid #ddd', 
+                    borderRadius: '8px', 
+                    background: '#f5f5f5',
+                    boxSizing: 'border-box'
+                  }} 
+                />
+                <div style={{ 
+                  position: 'absolute', 
+                  right: '10px', 
+                  top: '50%', 
+                  transform: 'translateY(-50%)'
+                }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <nav style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <div style={{ display: 'flex', gap: 0, whiteSpace: 'nowrap', minWidth: 'max-content' }}>
+                {['All', 'New', 'Sale', 'Men', 'Women', 'Accessories'].map((tab, i) => (
+                  <span key={i} style={{ 
+                    padding: '12px 16px', 
+                    color: i === 0 ? '#1976d2' : '#6B7280', 
+                    fontSize: '12px', 
+                    fontWeight: 600,
+                    borderBottom: i === 0 ? '2px solid #1976d2' : '2px solid transparent',
+                    cursor: 'pointer'
+                  }}>
+                    {tab}
+                  </span>
+                ))}
+              </div>
+            </nav>
+            
+            <div style={{ 
+              fontSize: '11px', 
+              color: '#666', 
+              textAlign: 'center', 
+              marginTop: '8px',
+              fontStyle: 'italic'
+            }}>
+              📱 Mobile Only (hidden on desktop)
+            </div>
+          </div>
+        );
       case 'ProductImageGallery':
         return (
           <div key={item.id} style={{ marginBottom: 24 }}>
@@ -415,6 +546,13 @@ function CustomProductPage({
   
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, alignItems: 'start' }}>
+      {/* Full width components at top */}
+      <div style={{ gridColumn: '1 / -1' }}>
+        {designData
+          .filter(item => ['MobileHeader', 'RelatedProducts', 'BannerCTA'].includes(item.type))
+          .map(renderComponent)}
+      </div>
+      
       {/* Left column for image gallery */}
       <div>
         {designData
@@ -425,14 +563,7 @@ function CustomProductPage({
       {/* Right column for product info and actions */}
       <div>
         {designData
-          .filter(item => !['ProductImageGallery', 'RelatedProducts', 'BannerCTA'].includes(item.type))
-          .map(renderComponent)}
-      </div>
-      
-      {/* Full width components */}
-      <div style={{ gridColumn: '1 / -1' }}>
-        {designData
-          .filter(item => ['RelatedProducts', 'BannerCTA'].includes(item.type))
+          .filter(item => !['MobileHeader', 'ProductImageGallery', 'RelatedProducts', 'BannerCTA'].includes(item.type))
           .map(renderComponent)}
       </div>
     </div>

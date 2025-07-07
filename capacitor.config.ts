@@ -1,10 +1,9 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.example.app',
-  appName: 'app-banao',
-  webDir: 'build/client',
-  bundledWebRuntime: false
+  appId: 'com.mobilex.app',
+  appName: 'mobilex-app-builder',
+  webDir: 'build/client'
 };
 
 export default config;

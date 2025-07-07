@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">app-banao</string>
-    <string name="title_activity_main">app-banao</string>
-    <string name="package_name">com.example.app</string>
-    <string name="custom_url_scheme">com.example.app</string>
+    <string name="app_name">mobilex-app-builder</string>
+    <string name="title_activity_main">mobilex-app-builder</string>
+    <string name="package_name">com.mobilex.app</string>
+    <string name="custom_url_scheme">com.mobilex.app</string>
 </resources>

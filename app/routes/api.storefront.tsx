@@ -2,8 +2,8 @@ import { json, type LoaderFunctionArgs } from "@remix-run/node";
 
 // TODO: Replace with your actual Storefront API access token from Shopify Admin
 // Go to: Apps > Develop apps > Your App > Storefront API > Install & generate token
-const STOREFRONT_API_TOKEN = "f585ae7a492af9600ab4edbc99c56b00-1751707255";
-const SHOP_DOMAIN = "tryongoeye.myshopify.com";
+const STOREFRONT_API_TOKEN = "your-storefront-api-token-here";
+const SHOP_DOMAIN = "your-shop-domain.myshopify.com";
 
 export const action = async ({ request }: LoaderFunctionArgs) => {
   if (request.method !== "POST") {

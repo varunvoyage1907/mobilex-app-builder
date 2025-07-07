@@ -1,0 +1,24 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "3bcf3ef203ea0fbee309e93e06f64fc7"
+name = "mobilex-app-builder"
+handle = "mobilex-app-builder-1"
+application_url = "https://sixth-diary-uncle-whose.trycloudflare.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-07"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_draft_orders,read_orders,read_products,read_themes,write_customers,write_draft_orders,write_orders,write_products,write_themes"
+
+[auth]
+redirect_urls = ["https://sixth-diary-uncle-whose.trycloudflare.com/auth/callback", "https://sixth-diary-uncle-whose.trycloudflare.com/auth/shopify/callback", "https://sixth-diary-uncle-whose.trycloudflare.com/api/auth/callback"]
+
+[pos]
+embedded = false

@@ -1,20 +1,24 @@
 {
-  "name": "app-banao",
+  "name": "mobilex-app-builder",
   "private": true,
   "scripts": {
     "build": "remix vite:build",
-    "dev": "shopify app dev",
-    "config:link": "shopify app config link",
-    "generate": "shopify app generate",
-    "deploy": "shopify app deploy",
-    "config:use": "shopify app config use",
-    "env": "shopify app env",
+    "dev": "npx shopify app dev",
+    "config:link": "npx shopify app config link",
+    "generate": "npx shopify app generate",
+    "deploy": "npx shopify app deploy",
+    "deploy:vercel": "npx vercel --prod",
+    "config:use": "npx shopify app config use",
+    "env": "npx shopify app env",
     "start": "remix-serve ./build/server/index.js",
     "docker-start": "npm run setup && npm run start",
     "setup": "prisma generate && prisma migrate deploy",
+    "db:migrate": "prisma migrate deploy",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
-    "shopify": "shopify",
-    "prisma": "prisma",
+    "shopify": "npx shopify",
+    "prisma": "npx prisma",
     "graphql-codegen": "graphql-codegen",
     "vite": "vite"
   },
@@ -29,18 +33,20 @@
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/modifiers": "^9.0.0",
     "@dnd-kit/sortable": "^10.0.0",
-    "@prisma/client": "^6.2.1",
-    "@remix-run/dev": "^2.16.1",
+    "@prisma/client": "6.11.1",
+    "@remix-run/dev": "^2.16.8",
     "@remix-run/fs-routes": "^2.16.1",
-    "@remix-run/node": "^2.16.1",
-    "@remix-run/react": "^2.16.1",
-    "@remix-run/serve": "^2.16.1",
+    "@remix-run/node": "^2.16.8",
+    "@remix-run/react": "^2.16.8",
+    "@remix-run/serve": "^2.16.8",
     "@shopify/app-bridge-react": "^4.1.6",
     "@shopify/polaris": "^12.0.0",
     "@shopify/shopify-app-remix": "^3.7.0",
     "@shopify/shopify-app-session-storage-prisma": "^6.0.0",
+    "@types/jszip": "^3.4.0",
     "isbot": "^5.1.0",
-    "prisma": "^6.2.1",
+    "jszip": "^3.10.1",
+    "prisma": "6.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-quill": "^2.0.0",
@@ -48,6 +54,7 @@
     "vite-tsconfig-paths": "^5.0.1"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
     "@remix-run/eslint-config": "^2.16.1",
     "@remix-run/route-config": "^2.16.1",
     "@shopify/api-codegen-preset": "^1.1.1",
@@ -60,6 +67,7 @@
     "eslint-config-prettier": "^10.0.1",
     "prettier": "^3.2.4",
     "typescript": "^5.2.2",
+    "vercel": "^39.4.3",
     "vite": "^6.2.2"
   },
   "workspaces": [
@@ -80,5 +88,5 @@
     "@graphql-codegen/typescript-operations": "4.5.0",
     "minimatch": "9.0.5"
   },
-  "author": "ssenterprises"
+  "author": "MobileX"
 }

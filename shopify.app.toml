@@ -1,9 +1,9 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "fb11a89d0b583a9ba76a70be71a1d7b6"
-name = "App-Banao"
-handle = "app-banao"
-application_url = "https://expenditure-preview-colon-presidential.trycloudflare.com"
+client_id = "407e9cdba221bb187c67447be9f200ba"
+name = "MobileX App Builder"
+handle = "mobilex-app-builder"
+application_url = "https://browsing-identification-organizational-marijuana.trycloudflare.com"
 embedded = true
 
 [build]
@@ -23,10 +23,10 @@ api_version = "2025-07"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "read_products,write_products,read_draft_orders,write_draft_orders,read_orders,write_orders,read_customers,write_customers"
+scopes = "read_products,write_products,read_draft_orders,write_draft_orders,read_orders,write_orders,read_customers,write_customers,read_themes,write_themes"
 
 [auth]
-redirect_urls = ["https://expenditure-preview-colon-presidential.trycloudflare.com/auth/callback", "https://expenditure-preview-colon-presidential.trycloudflare.com/auth/shopify/callback", "https://expenditure-preview-colon-presidential.trycloudflare.com/api/auth/callback"]
+redirect_urls = ["https://browsing-identification-organizational-marijuana.trycloudflare.com/auth/callback", "https://browsing-identification-organizational-marijuana.trycloudflare.com/auth/shopify/callback", "https://browsing-identification-organizational-marijuana.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false

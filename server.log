@@ -1,0 +1,126 @@
+
+> dev
+> npx shopify app dev
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Using shopify.app.mobilex-app-builder.toml for default values:              │
+│                                                                              │
+│    • Org:             SS Enterprises                                         │
+│    • App:             mobilex-app-builder                                    │
+│    • Dev store:       tryongoeye.myshopify.com                               │
+│    • Update URLs:     Yes                                                    │
+│                                                                              │
+│   You can pass `--reset` to your command to reset your app configuration.    │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+▁▁▂▂▃▃▄▄▅▅▆▆▇▇██▇▇▆▆▅▅▄▄▃▃▂▂▁▁▁▁▂▂▃▃▄▄▅▅▆▆▇▇██▇▇▆▆▅▅▄▄▃▃▂▂▁▁▁▁▂▂▃▃▄▄▅▅▆▆▇▇██▇▇▆▆
+▅▅▄▄▃▃▂▂▁▁
+Configuring host them[2K[1A[2K[1A[2K[1A[2K[[2K[1A[2K[1A[2K[1A[2K[G
+  ERROR  setRawMode ENOENT
+
+ node:tty:81:24
+
+ - ReadStream.setRawMode (node:tty:81:24)
+ -value (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/node_modules/sho
+       pify/dist/chunk-3Q5VPXT5.js:28346:65)
+ - (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/node_modules/shopify/
+  dist/chunk-3Q5VPXT5.js:29010:14)
+ -commitHookEffectLis (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/no
+  Mount              de_modules/shopify/dist/chunk-3Q5VPXT5.js:17136:102)
+ -commitPassiveMountO (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/no
+  Fiber              de_modules/shopify/dist/chunk-3Q5VPXT5.js:18011:15)
+ -commitPassiveMountEffec
+  s_complete             (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433
+                         /node_modules/shopify/dist/chunk-3Q5VPXT5.js:17980:15)
+ -commitPassiveMountEffe (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433
+  ts_begin              /node_modules/shopify/dist/chunk-3Q5VPXT5.js:17971:138)
+
+ -commitPassiveMountE (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/no
+  fects              de_modules/shopify/dist/chunk-3Q5VPXT5.js:17966:36)
+ -flushPassiveEffec (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/node
+  sImpl            _modules/shopify/dist/chunk-3Q5VPXT5.js:18987:87)
+ -flushPassiveEff (file:///Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/node_m
+  cts            odules/shopify/dist/chunk-3Q5VPXT5.js:18965:101)
+
+╭─ error ──────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Could not start Cloudflare tunnel: process crashed after stablishing a      │
+│  connection: Command was killed with SIGHUP (Terminal closed): /Users/varun  │
+│  agarwal/.npm/_npx/5db5ab0f66a0c433/node_modules/shopify/bin/cloudflared     │
+│  tunnel --url http://localhost:58921 --no-autoupdate                         │
+│  2025-07-07T10:16:45Z INF Thank you for trying Cloudflare Tunnel. Doing so,  │
+│   without a Cloudflare account, is a quick way to experiment and try it      │
+│  out. However, be aware that these account-less Tunnels have no uptime       │
+│  guarantee. If you intend to use Tunnels in production you should use a      │
+│  pre-created named tunnel by following:                                      │
+│  https://developers.cloudflare.com/cloudflare-one/connections/connect-apps   │
+│  2025-07-07T10:16:45Z INF Requesting new quick Tunnel on                     │
+│  trycloudflare.com...                                                        │
+│  2025-07-07T10:16:51Z INF +------------------------------------------------  │
+│  --------------------------------------------+                               │
+│  2025-07-07T10:16:51Z INF |  Your quick Tunnel has been created! Visit it    │
+│  at (it may take some time to be reachable):  |                              │
+│  2025-07-07T10:16:51Z INF |                                                  │
+│  https://sixth-diary-uncle-whose.trycloudflare.com                           │
+│                  |                                                           │
+│  2025-07-07T10:16:51Z INF +------------------------------------------------  │
+│  --------------------------------------------+                               │
+│  2025-07-07T10:16:51Z INF Cannot determine default configuration path. No    │
+│  file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp         │
+│  ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]              │
+│  2025-07-07T10:16:51Z INF Version 2024.8.2                                   │
+│  2025-07-07T10:16:51Z INF GOOS: darwin, GOVersion: go1.22.2-devel-cf,        │
+│  GoArch: arm64                                                               │
+│  2025-07-07T10:16:51Z INF Settings: map[ha-connections:1 no-autoupdate:true  │
+│   protocol:quic url:http://localhost:58921]                                  │
+│  2025-07-07T10:16:51Z INF Generated Connector ID:                            │
+│  0f34be7a-cbd3-4136-9503-09c84bcb561b                                        │
+│  2025-07-07T10:16:51Z INF Initial protocol quic                              │
+│  2025-07-07T10:16:51Z INF ICMP proxy will use 192.168.0.119 as source for    │
+│  IPv4                                                                        │
+│  2025-07-07T10:16:51Z INF ICMP proxy will use fe80::cb5:e56:11c5:89ce in     │
+│  zone en0 as source for IPv6                                                 │
+│  2025-07-07T10:16:51Z INF Created ICMP proxy listening on 192.168.0.119:0    │
+│  2025-07-07T10:16:51Z INF Created ICMP proxy listening on                    │
+│  [fe80::cb5:e56:11c5:89ce%en0]:0                                             │
+│  2025-07-07T10:16:51Z INF Starting metrics server on                         │
+│  127.0.0.1:58926/metrics                                                     │
+│  2025-07-07T10:16:52Z ERR update check failed error="no release found"       │
+│  2025-07-07T10:16:52Z INF Registered tunnel connection connIndex=0           │
+│  connection=33b6fe60-7296-4b7b-90ac-0cf36a6e2c30 event=0 ip=198.41.200.53    │
+│  location=del03 protocol=quic                                                │
+│                                                                              │
+│  Run the command again or see Shopify CLI documentation [1] for more         │
+│  options.                                                                    │
+│                                                                              │
+│  To investigate the issue, examine this stack trace:                         │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at (2025-07-07T10:16)                                                     │
+│    at externalErrorHandler (Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/n  │
+│    ode_modules/shopify/dist/index.js:230867)                                 │
+│    at exec2 (Users/varunagarwal/.npm/_npx/5db5ab0f66a0c433/node_modules/sho  │
+│    pify/dist/chunk-3Q5VPXT5.js:24902)                                        │
+│    at processTicksAndRejections (node:internal/process/task_queues:105)      │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+[1] https://shopify.dev/docs/apps/build/cli-for-apps/networking-options
+

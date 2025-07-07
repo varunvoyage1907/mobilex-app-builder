@@ -25,7 +25,10 @@ export default function App() {
           Home
         </Link>
         <Link to="/app/additional">Additional page</Link>
-        <Link to="/app/builder">Website Builder</Link>
+        <Link to="/app/test-create">🧪 Test App Creation</Link>
+        <Link to="/app/multi-builder">Multi-Page App Builder</Link>
+        <Link to="/app/builder">Mobile App Builder</Link>
+        <Link to="/app/theme-importer">Theme Importer</Link>
       </NavMenu>
       <Outlet />
     </AppProvider>
